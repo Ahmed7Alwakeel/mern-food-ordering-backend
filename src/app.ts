@@ -26,6 +26,9 @@ app.use("/api", limiter)
 app.use(express.json())
 app.use(mongoSanitize())
 app.use(express.static("src/public"))
+app.use("/health", (async(req:Request,res:Response)=>{
+res.send({message:"Health ok!"})
+}))
 app.use("/api/user", userRoute)
 
 app.all(
