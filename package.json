@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "./src/server.ts",
   "scripts": {
-    "start": "nodemon",
-    "build": "npx install && npx tsc"
+    "dev": "nodemon",
+    "build": "npx install && npx tsc",
+    "start":"node dist/server.js"
   },
   "keywords": [],
   "author": "",
